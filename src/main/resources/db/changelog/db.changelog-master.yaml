@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: david
+      changes:
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(45)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: david
+      changes:
+        - createTable:
+            tableName: parking
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: location
+                  type: varchar(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: parkingSpaces
+                  type: integer
+                  constrains:
+                    nullable: false
+              - column:
+                  name: freeParkingSpaces
+                  type: integer
+                  constrains:
+                  nullable: false
+              - column:
+                  name: timestamp
+                  type: timestamp
+                  constrains:
+                  nullable: false
